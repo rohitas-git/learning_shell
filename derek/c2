@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# variable
+myName="Rohitas"
+
+# constant
+NUM1=15
+
+num2=4
+
+# Arthmetic
+num3=$((NUM1+num2))
+num4=$((NUM1-num2))
+num5=$((NUM1*num2))
+num6=$((NUM1/num2))
+
+echo "15 + 4 = $num3" 
+echo "15 - 4 = $num4" 
+echo "15 * 4 = $num5" 
+echo "15 / 4 = $num6" 
+
+echo $((2**10))
+
+rand=5
+let rand+=2
+echo "$rand"
+echo "rand++ = $((rand++))"
+echo "++rand = $((++rand))"
+echo "rand-- = $((rand--))"
+echo "--rand = $((--rand))"
+
+# Python commands
+n1=1.2
+n2=3.4
+n3=$(python3 -c "print ($n1*$n2)")
+echo $n3
+
+
+# here script: to print info in multiple lines
+cat<< END
+This test 
+prints on 
+many lines
+END
+

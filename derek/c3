@@ -1,0 +1,42 @@
+#!/bin/bash
+
+getDate(){
+	date
+
+	return 
+}
+
+getDate
+
+# global var
+name="rohi"
+
+demLocal(){
+	# local var
+	local name="Arun"
+	echo $name
+	return
+}
+
+demLocal
+
+echo "$name" 
+
+getSum(){
+	# way to refer to passed arguments
+	local num3=$1
+	local num4=$2
+
+	local sum=$((num3+num4))
+
+	echo $sum
+}
+
+num1=5
+num2=6
+
+# passing values to function
+sum=$(getSum num1 num2)
+echo $sum
+
+
